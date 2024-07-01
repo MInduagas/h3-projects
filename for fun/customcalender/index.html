@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Calender</title>
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Custom Calendar</h1>
+            <button onclick="toggle('showPreview')">Show Preview</button>
+            <button onclick="toggle('lockPastDates')">Lock Past Dates</button>
+            <button onclick="toggle('lockFutureDates')">Lock Future Dates</button>
+        </div>
+        <h1>Calendar</h1>
+        <div id="Calender">
+            <div id="CalenderControlls"></div>
+            <div id="CalenderBody"></div>
+        </div>
+        <button onclick="displayDate()">Get Date</button>
+    </center>
+</body>
+<script src="/script.js"></script>
+<script>
+    let datePicker;
+
+    let showPreview = true;
+    let lockPastDates = false;
+    let lockFutureDates = false;
+
+    let test = false;
+
+    function toggle(optionName) {
+        if (optionName === 'showPreview') {
+            showPreview = !showPreview;
+        } else if (optionName === 'lockPastDates') {
+            lockPastDates = !lockPastDates;
+        } else if (optionName === 'lockFutureDates') {
+            lockFutureDates = !lockFutureDates;
+        }
+
+        datePicker.updateOptions({
+            showPreview: showPreview,
+            lockPastDates: lockPastDates,
+            lockFutureDates: lockFutureDates
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        datePicker = new CustomDatePicker('CalenderBody', 'CalenderControlls', {
+            showPreview: showPreview,
+            lockPastDates: true,
+            lockFutureDates: lockFutureDates,
+            css:[
+                'style.css' 
+            ],
+            disabledDates:[],
+            
+        });
+    });
+
+    /*
+        lockFromDate: '2024-06-20' -- Locks all dates before this date
+        lockToDate: '2024-06-20' -- Locks all dates after this date
+        showPreview: true -- Highlights the selected dates
+        lockPastDates: false -- Locks all past dates from today
+        lockFutureDates: false -- Locks all future dates from today
+        disabledDates: ['2024-06-20', { from: 2024-06-25, to: 2024-06-28}] -- Disables the specified dates 
+        css: ['style.css'] -- Adds the specified css file
+        disableWeekends: true -- Disables the weekends
+
+        datepicker.getSelectedDates() -- Returns the selected dates
+        datepicker.updateOptions({}) -- Updates the options ex. showPreview: false, lockPastDates: true
+        datepicker.setXXX() -- Sets the XXX ex. setLockPastDates(true)
+
+    */
+
+    function displayDate() {
+        alert(JSON.stringify(datePicker.getSelectedDates()));
+    }
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app!!1!</title>
+</head>
+<body onload="loadPreviousMessages()">
+    <div style="width: 100%; max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <div id="inputs" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <input id="input" style="flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"/>
+            <button id="send" style="margin-left: 10px; padding: 10px 20px; border: none; background-color: #007BFF; color: white; border-radius: 4px; cursor: pointer;">Send</button>  
+        </div>
+        <div id="messages" style="border: 1px solid #ccc; padding: 10px; height: 90vh; overflow-y: scroll; border-radius: 4px;"></div>
+    </div>
+</body>
+<script>
+    const input = document.getElementById('input');
+    const send = document.getElementById('send');
+    const messages = document.getElementById('messages');
+
+    const ws = new WebSocket('ws://172.16.3.113:8990');
+
+    ws.onopen = () => {
+    }
+
+    ws.onmessage = (message) => {
+        const messageElement = document.createElement('div');
+        // message == {userid: 1, roomid: 1, message: 'Hello world!}
+        const data = JSON.parse(message.data);
+        messageElement.innerHTML = data.message;
+
+        // Add some styles to the div
+        messageElement.style.border = '1px solid #ccc';
+        messageElement.style.padding = '10px';
+        messageElement.style.margin = '10px 0';
+        messageElement.style.borderRadius = '5px';
+        messageElement.style.backgroundColor = '#f9f9f9';
+
+        messages.appendChild(messageElement);
+    }
+
+    send.onclick = () => {
+        let data = JSON.stringify({
+            userid: 1,
+            roomid: 1,
+            message: input.value
+        })
+        ws.send(data);
+        input.value = '';
+    }
+
+    function loadPreviousMessages() {
+    fetch('http://172.16.3.113:8989/messages')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(message => {
+                const messageElement = document.createElement('div');
+                messageElement.innerHTML = message.message; // Assuming the message object has a 'content' property
+
+                // Add some styles to the div
+                messageElement.style.border = '1px solid #ccc';
+                messageElement.style.padding = '10px';
+                messageElement.style.margin = '10px 0';
+                messageElement.style.borderRadius = '5px';
+                messageElement.style.backgroundColor = '#f9f9f9';
+
+                messages.appendChild(messageElement);
+            });
+            messages.scrollTop = messages.scrollHeight;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    window.onhashchange = function() {
+    if (window.location.hash === '#/reset') {
+        fetch('http://172.16.3.113:8989/messages', {
+            method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+}
+</script>
+</html>

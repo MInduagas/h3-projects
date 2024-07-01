@@ -1,0 +1,86 @@
+.fancyDivSelector{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    .pictureContainer{
+        border: 1px solid black;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba($color: #000000, $alpha: 1.0);
+        min-width: 350px;
+        filter: grayscale(80%) blur(1.2px);
+        transition: filter 0.15s ease-in-out;
+
+        &:hover{
+            filter: grayscale(0%) blur(0rem);
+        }
+        &.not-hovered {
+            filter: grayscale(100%) blur(5px);
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        .pictureContainer{
+            min-width: 100vw;
+        }
+        .pictureSelector{
+            display: none;
+            background-color: red;
+        }
+        
+    }
+    .pictureSelector{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: black;
+        border-radius: 0%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:hover{
+            background-color: rgba($color: #000000, $alpha: 0.75);
+        }
+        #horizontalLine{
+            width: 50%;
+            height: 2px;
+            background-color: red;
+            position: absolute;
+            transform: translate(0%, -50%);
+            display: none;
+        }
+        #verticalLine{
+            width: 2px;
+            height: 50%;
+            background-color: red;
+            position: absolute;
+            transform: translate(-50%, 0%);
+            display: none;
+        }
+
+        #horizontalLine, #verticalLine {
+            transition: all 0.5s ease;
+        }
+        @keyframes expand {
+            0% { width: 50%; }
+            50% { width: 100%; }
+            100% { width: 50%; }
+        }
+        
+        @keyframes expandReverse {
+            0% { width: 50%; right: 50%; }
+            50% { width: 100%; right: 0; }
+            100% { width: 50%; right: 50%; }
+        }
+    }
+}

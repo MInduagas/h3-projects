@@ -1,0 +1,63 @@
+#Calender {
+    background-color: #ffffff; /* Lighter background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+}
+
+#CalenderBody {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+#CalenderBody .Headers {
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+}
+
+.prevMonth, .currentMonth, .nextMonth {
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font: optional;
+}
+
+.prevMonth:hover, .currentMonth:hover, .nextMonth:hover {
+    background-color: rgba(100, 100, 100, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prevMonth, .nextMonth {
+    color: #999;
+}
+
+.currentMonth {
+    color: #333;
+}
+.selected {
+    background-color: #4CAF50; /* Green background for selected dates */
+    color: white; /* White text color */
+}
+.range {
+    background-color: #C8E6C9; /* Light green background for dates in the range */
+}
+.unclickable {
+    color: #ccc;
+    pointer-events: none;
+    cursor: default;
+}
+.disabled {
+    color: #ffa339;
+    pointer-events: none;
+    cursor: default;
+    background-color: #fff3e0;
+}

@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react';
+import './../styles.css';
+import { apiUrl } from '../../apiConf';
+
+const OverXAntalKr = () => {
+    const [kunder, setKunder] = useState([]);
+    const [number, setNumber] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const fetchData = async () => {
+        let response = await fetch(apiUrl + "api/order/p/" + number);
+        let data = await response.json();
+        setKunder(data);
+    }
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+    }
+
+    return (
+        <div className="bolche">
+            <h2 onClick={toggleVisibility}>Kunder Med Order over x antal kr</h2>
+            {isVisible && (<>
+                <input type="number" value={number} onChange={e => setNumber(e.target.value)} /><label> Kr   </label>
+                <button onClick={fetchData}>Hent</button>
+                <table className="bolche-table">
+                    <thead>
+                        <tr className="bolche-header">
+                            <th className="bolche-th">Kunde Navn</th>
+                            <th className='bolche-th'>Order ID</th>
+                            <th className="bolche-th">Kr Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {kunder.map((kunde) => (
+                            <tr key={kunde.id} className="bolche-row">
+                                <td className="bolche-td">{kunde.navn}</td>
+                                <td className='bolche-td'>{kunde.orderid}</td>
+                                <td className="bolche-td">{kunde.total_price} Kr</td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </>)}
+        </div>
+    );
+}
+
+export default OverXAntalKr;

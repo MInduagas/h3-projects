@@ -1,0 +1,386 @@
+{
+    "Documents":[
+        {
+            "Language": "en",
+            "Sentance": "Hello World",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Good Morning",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Good Afternoon",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Good Evening",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Good Night",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How's it going?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How are things?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How's everything?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How's your day?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How's your day going?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Nice to meet you",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "It's a pleasure to meet you",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Pleased to meet you",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Glad to meet you",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Long time no see",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How have you been?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How do you do?",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Yo!",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Hey!",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Hi!",
+            "Intent": "Greeting"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the weather like?",
+            "Intent": "GetWeather"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Tell me a joke",
+            "Intent": "TellJoke"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the news today?",
+            "Intent": "GetNews"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Set a timer for 10 minutes",
+            "Intent": "SetTimer"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Play some music",
+            "Intent": "PlayMusic"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the weather like today?",
+            "Intent": "Weather"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Tell me a joke!",
+            "Intent": "TellJoke"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How do I bake chocolate chip cookies?",
+            "Intent": "Recipe"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Translate hello to French.",
+            "Intent": "Translation"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the capital of Japan?",
+            "Intent": "Geography"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How does photosynthesis work?",
+            "Intent": "Science"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Recommend a good book to read.",
+            "Intent": "Book Recommendation"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How do I tie a bowline knot?",
+            "Intent": "Knot-Tying"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the meaning of life?",
+            "Intent": "Philosophy"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How do I make a paper airplane?",
+            "Intent": "Craft"
+        },
+        {
+            "Language": "en",
+            "Sentance": "What's the square root of 64?",
+            "Intent": "Math"
+        },
+        {
+            "Language": "en",
+            "Sentance": "Who wrote 'Pride and Prejudice'?",
+            "Intent": "Literature"
+        },
+        {
+            "Language": "en",
+            "Sentance": "How do I change a flat tire?",
+            "Intent": "Car Maintenance"
+        }
+    ],
+    "Answers":[
+        {
+            "Language": "en",
+            "Intent": "Weather",
+            "Answer": "Today's weather is sunny with a high of 75 F."
+        },
+        {
+            "Language": "en",
+            "Intent": "TellJoke",
+            "Answer": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+        },
+        {
+            "Language": "en",
+            "Intent": "Recipe",
+            "Answer": "To bake chocolate chip cookies, preheat your oven to 350°F. Mix butter, sugar, eggs, and vanilla. Add flour, baking soda, and chocolate chips. Drop spoonfuls onto a baking sheet and bake for 10-12 minutes."
+        },
+        {
+            "Language": "en",
+            "Intent": "Translation",
+            "Answer": "The French translation of 'hello' is 'bonjour'."
+        },
+        {
+            "Language": "en",
+            "Intent": "Geography",
+            "Answer": "The capital of Japan is Tokyo."
+        },
+        {
+            "Language": "en",
+            "Intent": "Science",
+            "Answer": "Photosynthesis is the process by which plants convert sunlight into energy, producing oxygen and glucose."
+        },
+        {
+            "Language": "en",
+            "Intent": "Book Recommendation",
+            "Answer": "I recommend 'To Kill a Mockingbird' by Harper Lee."
+        },
+        {
+            "Language": "en",
+            "Intent": "Knot-Tying",
+            "Answer": "To tie a bowline knot, form a loop, pass the end through the loop, and around the standing part. Pull tight."
+        },
+        {
+            "Language": "en",
+            "Intent": "Philosophy",
+            "Answer": "The meaning of life is a profound question with various interpretations. Some find purpose in relationships, others in personal growth."
+        },
+        {
+            "Language": "en",
+            "Intent": "Craft",
+            "Answer": "To make a paper airplane, fold a sheet of paper in half, then fold the top corners down to the center. Fold the resulting triangle in half, and then fold the wings down."
+        },
+        {
+            "Language": "en",
+            "Intent": "Math",
+            "Answer": "The square root of 64 is 8."
+        },
+        {
+            "Language": "en",
+            "Intent": "Literature",
+            "Answer": "'Pride and Prejudice' was written by Jane Austen."
+        },
+        {
+            "Language": "en",
+            "Intent": "Car Maintenance",
+            "Answer": "Changing a flat tire involves loosening lug nuts, using a jack to lift the car, removing the flat tire, and replacing it with a spare"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello there!"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Good day!"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hi, how can I assist you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello! How can I help you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hey! What can I do for you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hi there! How can I assist you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello! What can I do for you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Good to see you! How can I assist you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hey there! How can I help you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hi! What can I do for you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello! How may I assist you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Good day! How can I help you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hey! How can I assist you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hi there! What can I do for you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello! How may I help you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Good to see you! What can I do for you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hey there! How may I assist you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hi! How can I help you today?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Hello! What can I do for you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "Greeting",
+            "Answer": "Good day! How may I assist you?"
+        },
+        {
+            "Language": "en",
+            "Intent": "GetWeather",
+            "Answer": "The weather today is sunny with a high of 75."
+        },
+        {
+            "Language": "en",
+            "Intent": "TellJoke",
+            "Answer": "Why don't scientists trust atoms? Because they make up everything!"
+        },
+        {
+            "Language": "en",
+            "Intent": "GetNews",
+            "Answer": "Today's headlines include..."
+        },
+        {
+            "Language": "en",
+            "Intent": "SetTimer",
+            "Answer": "Setting a timer for 10 minutes."
+        },
+        {
+            "Language": "en",
+            "Intent": "PlayMusic",
+            "Answer": "Playing your favorite playlist now."
+        }
+    ]
+}
